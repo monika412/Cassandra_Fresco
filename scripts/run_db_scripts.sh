@@ -1,5 +1,5 @@
 #!bin/sh
-
+set -e
 cqlsh -e "
 
 CREATE KEYSPACE fresco_seg  WITH REPLICATION = { 'class' : 'SimpleStrategy','replication_factor' : 1 };
