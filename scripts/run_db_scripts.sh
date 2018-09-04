@@ -1,5 +1,8 @@
 #!bin/sh
 set -e
+
+/entrypoint.sh dse cassandra
+
 cqlsh -e "
 
 CREATE KEYSPACE fresco_seg  WITH REPLICATION = { 'class' : 'SimpleStrategy','replication_factor' : 1 };
